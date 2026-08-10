@@ -20,9 +20,9 @@ document.addEventListener('click', function(event) {
     const dropdown = document.getElementById('moreWorksDropdown');
     const button = document.querySelector('.more-works-btn');
     
-    if (container && !container.contains(event.target)) {
+    if (container && dropdown && !container.contains(event.target)) {
         dropdown.classList.remove('show');
-        button.classList.remove('active');
+        if (button) button.classList.remove('active');
     }
 });
 
@@ -31,8 +31,8 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         const dropdown = document.getElementById('moreWorksDropdown');
         const button = document.querySelector('.more-works-btn');
-        dropdown.classList.remove('show');
-        button.classList.remove('active');
+        if (dropdown) dropdown.classList.remove('show');
+        if (button) button.classList.remove('active');
     }
 });
 
@@ -46,7 +46,7 @@ function copyBibTeX() {
         navigator.clipboard.writeText(bibtexElement.textContent).then(function() {
             // Success feedback
             button.classList.add('copied');
-            copyText.textContent = 'Cop';
+            copyText.textContent = 'Copied!';
             
             setTimeout(function() {
                 button.classList.remove('copied');
@@ -63,7 +63,7 @@ function copyBibTeX() {
             document.body.removeChild(textArea);
             
             button.classList.add('copied');
-            copyText.textContent = 'Cop';
+            copyText.textContent = 'Copied!';
             setTimeout(function() {
                 button.classList.remove('copied');
                 copyText.textContent = 'Copy';
@@ -131,11 +131,10 @@ $(document).ready(function() {
 		autoplaySpeed: 5000,
     }
 
-	// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
-    
+	// Initialize all div with carousel class (library only loaded when used)
+    if (typeof bulmaCarousel !== 'undefined') bulmaCarousel.attach('.carousel', options);
+    if (typeof bulmaSlider !== 'undefined') bulmaSlider.attach();
+
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
 
