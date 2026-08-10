@@ -1,0 +1,15 @@
+{
+ "scene": "0229",
+ "camera": "CAM_FRONT",
+ "fps": 8,
+ "n_frames": 158,
+ "size": [
+  800,
+  450
+ ],
+ "files": {
+  "sedan": "sedan.mp4",
+  "suv": "suv.mp4",
+  "bus": "bus.mp4"
+ }
+}

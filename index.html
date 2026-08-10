@@ -3,178 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception">
+  <meta name="description" content="RoboGeo is a CARLA-based benchmark for camera-geometry robustness in multi-camera BEV perception, with viewpoint perturbation and cross-platform transfer protocols.">
+  <meta name="keywords" content="BEV perception, camera geometry, robustness benchmark, autonomous driving, CARLA, multi-camera, 3D object detection, BEV segmentation">
+  <!-- TODO: List all authors at camera-ready -->
+  <meta name="author" content="Anonymous (WACV 2027 submission)">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Replace with the lab/institution name at camera-ready -->
+  <meta property="og:site_name" content="RoboGeo Project">
+  <meta property="og:title" content="RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception">
+  <meta property="og:description" content="RoboGeo is a CARLA-based benchmark for camera-geometry robustness in multi-camera BEV perception, with viewpoint perturbation and cross-platform transfer protocols.">
+  <meta property="og:url" content="https://shdragron.github.io/RoboGeo/">
   <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image" content="https://shdragron.github.io/RoboGeo/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="RoboGeo - Research Preview">
+  <meta property="article:published_time" content="2026-08-10T00:00:00.000Z">
+  <meta property="article:author" content="Anonymous">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="BEV perception">
+  <meta property="article:tag" content="robustness benchmark">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception">
+  <meta name="twitter:description" content="A CARLA-based benchmark for camera-geometry robustness in multi-camera BEV perception.">
+  <meta name="twitter:image" content="https://shdragron.github.io/RoboGeo/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="RoboGeo - Research Preview">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <meta name="citation_title" content="RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception">
+  <!-- TODO: Add one citation_author line per author (Last, First) at camera-ready -->
+  <meta name="citation_publication_date" content="2027">
+  <meta name="citation_conference_title" content="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)">
+  <!-- TODO: Add citation_pdf_url once the camera-ready PDF / arXiv version is public -->
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+  <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+  <script defer src="static/js/rg-demo.js"></script>
+  <script defer src="static/js/rg-results.js"></script>
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception",
+    "description": "A CARLA-based benchmark for camera-geometry robustness in multi-camera BEV perception, with viewpoint perturbation and cross-platform transfer protocols.",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
+        "name": "Anonymous"
       }
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2026-08-10",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2027"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "url": "https://shdragron.github.io/RoboGeo/",
+    "image": "https://shdragron.github.io/RoboGeo/static/images/social_preview.png",
+    "keywords": ["BEV perception", "camera geometry", "robustness benchmark", "autonomous driving", "CARLA"],
+    "abstract": "Multi-camera bird's-eye-view (BEV) perception models are commonly trained and evaluated on a fixed camera rig. However, real deployment may involve camera-mounting changes on the same vehicle or transfer to different vehicle platforms. We introduce RoboGeo, a CARLA-based benchmark for camera-geometry robustness in multi-camera BEV perception.",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+      "@id": "https://shdragron.github.io/RoboGeo/"
+    }
   }
   </script>
 </head>
@@ -186,107 +125,37 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception</h1>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+              <!-- TODO: Replace with the real author list, links, and institution(s) at camera-ready -->
+              <span class="author-block">Anonymous Authors</span>
+              </div>
 
                   <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">WACV 2027 &middot; Datasets Track</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
+                         <!-- TODO: Link the arXiv / camera-ready PDF when public, then remove is-coming-soon -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
+                        <a class="external-link button is-normal is-rounded is-dark is-coming-soon" title="Coming soon">
                         <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
+                          <i class="ai ai-arxiv"></i>
                         </span>
                         <span>Paper</span>
                       </a>
                     </span>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
+                    <!-- TODO: Point at the public benchmark code repository when released -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/shdragron/RoboGeo" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -295,14 +164,21 @@
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
+                <!-- TODO: Link the Hugging Face dataset when public, then remove is-coming-soon -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a class="external-link button is-normal is-rounded is-dark is-coming-soon" title="Coming soon">
+                  <span class="icon">🤗</span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+                <span class="link-block">
+                  <a href="#BibTeX"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <i class="fas fa-quote-left"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>BibTeX</span>
                 </a>
               </span>
             </div>
@@ -314,23 +190,31 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser: benchmark overview figure -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      <img src="static/images/main_figure.webp"
+           alt="RoboGeo benchmark overview: geometrically consistent re-rendering with CARLA, the viewpoint perturbation and cross-platform transfer protocols, and the Normal/EXT/IMG/CAL evaluation conditions"/>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+        <b>RoboGeo</b> re-renders the same driving scenes under changed camera geometry with CARLA,
+        producing geometrically consistent image&ndash;extrinsic pairs. Two protocols &mdash;
+        <b>viewpoint perturbation</b> and <b>cross-platform transfer</b> &mdash; are evaluated under
+        diagnostic conditions (<b>EXT</b> / <b>IMG</b> / <b>CAL</b> for viewpoint perturbation;
+        <b>IMG</b> / <b>CAL</b> for cross-platform transfer) that separate the effects of images
+        and extrinsics.
       </h2>
+      <div class="rg-stats">
+        <div class="rg-stat"><span class="rg-stat-num">268</span><span class="rg-stat-label">driving scenes</span></div>
+        <div class="rg-stat"><span class="rg-stat-num">212</span><span class="rg-stat-label">changed camera geometries</span></div>
+        <div class="rg-stat"><span class="rg-stat-num">3</span><span class="rg-stat-label">vehicle platforms</span></div>
+        <div class="rg-stat"><span class="rg-stat-num">2</span><span class="rg-stat-label">protocols &amp; tasks</span></div>
+        <div class="rg-stat"><span class="rg-stat-num">13</span><span class="rg-stat-label">models benchmarked</span></div>
+      </div>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -339,9 +223,22 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Multi-camera bird&rsquo;s-eye-view (BEV) perception models are commonly trained and evaluated
+            on a fixed camera rig. However, real deployment may involve camera-mounting changes on the
+            same vehicle or transfer to different vehicle platforms. Existing evaluations rely on proxies
+            rather than reproducing such camera-geometry changes. Extrinsic-only perturbation leaves the
+            input images unchanged, whereas cross-domain generalization entangles camera geometry with
+            domain shift. We introduce <b>RoboGeo</b>, a CARLA-based benchmark for camera-geometry
+            robustness in multi-camera BEV perception. RoboGeo re-renders the same scenes under changed
+            camera geometry, producing geometrically consistent image&ndash;extrinsic pairs. We define
+            three diagnostic conditions that separate extrinsic-only perturbation, viewpoint change with
+            base extrinsics, and viewpoint change with the corresponding extrinsics. RoboGeo provides two
+            protocols, viewpoint perturbation and cross-platform transfer to the SUV and Bus layouts.
+            Robustness under each is quantified by the mean Viewpoint Robustness Score (mVRS) and the
+            Cross-Platform Transfer Score (CTS), respectively. We benchmark representative BEV
+            segmentation and 3D object detection models, providing insights into the relationship between
+            view transformation and camera-geometry robustness.
           </p>
         </div>
       </div>
@@ -351,123 +248,213 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
+<!-- Viewpoint perturbation interactive demo -->
+<section class="hero is-small" id="demo-viewpoint">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Viewpoint Perturbation</h2>
+      <h2 class="subtitle has-text-centered rg-section-sub">
+        This protocol rotates cameras of the base rig about roll, pitch, or yaw to model camera-rig
+        changes such as vibration or mount shift. <b>Drag the video</b> &mdash; horizontally for
+        <b>yaw</b>, vertically for <b>pitch</b> &mdash; or use the dials (one axis at a time,
+        &plusmn;20&deg; in 4&deg; steps; front camera shown). All pose videos share a single timeline:
+        the scene never stops, only the camera geometry changes.
       </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div id="rg-vp" class="rg-demo">
+        <div class="rg-scene-group" role="group" aria-label="Scene selection">
+          <span class="rg-scene-caption">Scene</span>
+          <button type="button" data-scene="scene-0241" class="rg-selected">1</button>
+          <button type="button" data-scene="scene-0250">2</button>
+          <button type="button" data-scene="scene-0267">3</button>
+        </div>
+        <div class="rg-video-wrap rg-grabbable">
+          <div class="rg-stage">
+            <video muted loop playsinline autoplay preload="auto"></video>
+            <video muted loop playsinline preload="auto"></video>
           </div>
+          <div class="rg-badge">Base rig</div>
+          <div class="rg-spinner" style="display:none"><div class="rg-spinner-dot"></div></div>
+          <div class="rg-play-overlay"><i class="fas fa-play"></i></div>
+          <div class="rg-drag-hint"><i class="fas fa-arrows-alt"></i>&nbsp;Drag to rotate the camera</div>
+        </div>
+        <div class="rg-vp-controls">
+          <div class="rg-dial-block">
+            <svg class="rg-dial" data-axis="yaw" role="slider"
+                 aria-label="Yaw angle" aria-valuemin="-20" aria-valuemax="20" aria-valuenow="0"></svg>
+            <span class="rg-dial-label">Yaw</span>
+          </div>
+          <div class="rg-dial-block">
+            <svg class="rg-dial" data-axis="pitch" role="slider"
+                 aria-label="Pitch angle" aria-valuemin="-20" aria-valuemax="20" aria-valuenow="0"></svg>
+            <span class="rg-dial-label">Pitch</span>
+          </div>
+          <div class="rg-dial-block">
+            <svg class="rg-dial" data-axis="roll" role="slider"
+                 aria-label="Roll angle" aria-valuemin="-20" aria-valuemax="20" aria-valuenow="0"></svg>
+            <span class="rg-dial-label">Roll</span>
+          </div>
+          <button type="button" class="rg-reset"><i class="fas fa-undo"></i>&nbsp;Reset view</button>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End viewpoint perturbation demo -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
+<!-- Cross-platform transfer interactive demo -->
+<section class="hero is-small is-light" id="demo-platform">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Cross-Platform Transfer</h2>
+      <h2 class="subtitle has-text-centered rg-section-sub">
+        This protocol deploys a Sedan-trained model on vehicles whose cameras are mounted at
+        different heights and orientations. The same scene is captured from the camera layouts of
+        three platforms &mdash; <b>switch the platform</b> while the scene plays (front camera shown):
+        the timeline continues, only the camera layout changes.
+      </h2>
+      <div id="rg-cp" class="rg-demo">
+        <div class="rg-scene-group" role="group" aria-label="Scene selection">
+          <span class="rg-scene-caption">Scene</span>
+          <button type="button" data-scene="scene-0224" class="rg-selected">1</button>
+          <button type="button" data-scene="scene-0229">2</button>
+          <button type="button" data-scene="scene-0259">3</button>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
+        <div class="rg-video-wrap">
+          <div class="rg-stage">
+            <video muted loop playsinline autoplay preload="auto"></video>
+            <video muted loop playsinline preload="auto"></video>
+          </div>
+          <div class="rg-badge">Sedan (base layout)</div>
+          <div class="rg-spinner" style="display:none"><div class="rg-spinner-dot"></div></div>
+          <div class="rg-play-overlay"><i class="fas fa-play"></i></div>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+        <div class="rg-platform-group">
+          <button type="button" data-value="sedan" class="rg-selected">
+            <i class="fas fa-car-side"></i>
+            <span class="rg-plat-name">Sedan</span>
+            <span class="rg-plat-sub">base layout</span>
+          </button>
+          <button type="button" data-value="suv">
+            <i class="fas fa-shuttle-van"></i>
+            <span class="rg-plat-name">SUV</span>
+            <span class="rg-plat-sub">milder layout shift</span>
+          </button>
+          <button type="button" data-value="bus">
+            <i class="fas fa-bus"></i>
+            <span class="rg-plat-name">Bus</span>
+            <span class="rg-plat-sub">largest layout shift</span>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End cross-platform transfer demo -->
 
 
+<!-- Main results leaderboard -->
+<section class="section" id="results">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Main Results</h2>
+    <h2 class="subtitle has-text-centered rg-section-sub">
+      Normalized robustness scores in percent (higher is better): <b>mVRS</b> under viewpoint
+      perturbation and <b>CTS</b> under cross-platform transfer. Shaded columns mark the primary
+      condition of each protocol (<b>IMG</b> / <b>CAL</b>); EXT is reported for analysis only.
+      Click a column header to sort.
+    </h2>
+    <div class="rg-task-tabs">
+      <button type="button" data-task="det" class="rg-selected">Task 1 &middot; 3D Object Detection</button>
+      <button type="button" data-task="seg">Task 2 &middot; BEV Vehicle Segmentation</button>
+    </div>
+    <div class="rg-table-scroll">
+      <table class="rg-results" id="rg-results-table"></table>
+    </div>
+    <p class="rg-table-notes">
+      P<sub>NORMAL</sub> is each model&rsquo;s unperturbed performance and P<sub>oracle</sub> the
+      performance of a model trained and evaluated on that platform (CDS for detection, IoU for
+      segmentation). <b>Bold</b>&nbsp;/&nbsp;<u>underlined</u>: best / second-best per shaded
+      (primary) column and P<sub>NORMAL</sub>.
+      <sup>&dagger;</sup>&nbsp;trained with explicit depth supervision.
+      <sup>&Dagger;</sup>&nbsp;explicitly designed to be robust to extrinsic viewpoint changes.
+    </p>
+  </div>
+</section>
+<!-- End main results -->
 
 
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- Key findings -->
+<section class="hero is-small is-light" id="findings">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Key Findings</h2>
+      <div class="rg-findings">
+        <div class="rg-finding">
+          <span class="rg-finding-num">1</span>
+          <h3>Extrinsic-only perturbation is a poor proxy</h3>
+          <p>
+            Perturbing only the extrinsics (EXT) leaves the input images unchanged and underestimates
+            the degradation from a real viewpoint change. Under changed images (IMG), every
+            benchmarked model degrades &mdash; even the most robust model in each task loses more
+            than 13% of its unperturbed performance.
+          </p>
+        </div>
+        <div class="rg-finding">
+          <span class="rg-finding-num">2</span>
+          <h3>View transformation drives robustness</h3>
+          <p>
+            Robustness varies systematically with how a model maps image features into BEV space.
+            Backward-projection models transfer most robustly across platforms, recovering up to
+            76.9% (detection) and 67.5% (segmentation) of the oracle on the SUV.
+          </p>
+        </div>
+        <div class="rg-finding">
+          <span class="rg-finding-num">3</span>
+          <h3>Cross-platform transfer is far from solved</h3>
+          <p>
+            The Bus differs from the Sedan the most in camera height, spacing, and orientation. Even
+            with the correct target extrinsics supplied (CAL), the best models reach only 48.1%
+            (detection) and 36.8% (segmentation) of the oracle, with most entries below half.
+          </p>
+        </div>
+        <div class="rg-finding">
+          <span class="rg-finding-num">4</span>
+          <h3>Existing methods narrow but do not close the gap</h3>
+          <p>
+            Extrinsic augmentation changes the calibration but never the images: it adds little
+            robustness and can lower clean performance. Cross-domain methods help more &mdash;
+            PD-BEV lifts BEVDepth&rsquo;s Bus transfer from 16.6% to 41.8% CTS &mdash; yet no method
+            closes the gap on either protocol. RoboGeo remains far from saturated.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
+<!-- End key findings -->
 
+
+<!-- Acknowledgements and license -->
+<section class="section" id="acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Acknowledgements &amp; License</h2>
+    <p>
+      RoboGeo is built on <a href="https://github.com/goodarzmehr/simbev" target="_blank">SimBEV</a>
+      (<a href="https://arxiv.org/abs/2502.01894" target="_blank">Mehr and Eskandarian, 2025</a>),
+      a synthetic multi-task multi-sensor driving data generation tool based on the
+      <a href="https://carla.org" target="_blank">CARLA</a> simulator.
+      We sincerely thank Dr.&nbsp;Goodarz Mehr for making SimBEV available and for supporting its use in this benchmark,
+      and the CARLA team for the open-source simulator that made this work possible.
+    </p>
+    <p>
+      The RoboGeo dataset is released under the
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+      CC&nbsp;BY-NC-SA&nbsp;4.0</a> license
+      (Attribution&ndash;NonCommercial&ndash;ShareAlike).
+    </p>
+  </div>
+</section>
+<!-- End acknowledgements -->
 
 
 <!--BibTex citation -->
@@ -480,12 +467,12 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <!-- TODO: Fill in the author list (and page numbers once published) -->
+      <pre id="bibtex-code"><code>@inproceedings{robogeo2027,
+  title     = {RoboGeo: Benchmarking Camera-Geometry Robustness in Multi-Camera BEV Perception},
+  author    = {Anonymous},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year      = {2027}
 }</code></pre>
     </div>
 </section>
@@ -499,7 +486,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
@@ -510,11 +497,6 @@
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
+  </main>
   </body>
   </html>

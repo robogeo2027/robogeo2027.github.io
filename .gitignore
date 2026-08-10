@@ -1,0 +1,3 @@
+# Do not push root-level PDFs (e.g. the confidential review copy of the paper).
+# PDFs meant for the website (poster, supplementary) go in static/pdfs/ instead.
+/*.pdf
