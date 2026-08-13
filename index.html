@@ -164,9 +164,9 @@
                   </a>
                 </span>
 
-                <!-- TODO: Link the Hugging Face dataset when public, then remove is-coming-soon -->
                 <span class="link-block">
-                  <a class="external-link button is-normal is-rounded is-dark is-coming-soon" title="Coming soon">
+                  <a href="https://huggingface.co/datasets/shdragron/RoboGeo" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">🤗</span>
                   <span>Dataset</span>
                 </a>
@@ -353,10 +353,10 @@
 <!-- End cross-platform transfer demo -->
 
 
-<!-- Main results leaderboard -->
-<section class="section" id="results">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Main Results</h2>
+<!-- Leaderboard -->
+<section class="section" id="leaderboard">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Leaderboard</h2>
     <h2 class="subtitle has-text-centered rg-section-sub">
       Normalized robustness scores in percent (higher is better): <b>mVRS</b> under viewpoint
       perturbation and <b>CTS</b> under cross-platform transfer. Shaded columns mark the primary
@@ -378,9 +378,15 @@
       <sup>&dagger;</sup>&nbsp;trained with explicit depth supervision.
       <sup>&Dagger;</sup>&nbsp;explicitly designed to be robust to extrinsic viewpoint changes.
     </p>
+    <p class="rg-table-notes has-text-centered" style="margin-top: 0.75rem;">
+      <!-- TODO: Point at the public benchmark repository once released -->
+      <i class="fab fa-github"></i>&nbsp;Want your model on the leaderboard?
+      <a href="https://github.com/shdragron/RoboGeo/issues" target="_blank">Open an issue</a>
+      with your results on the RoboGeo evaluation split.
+    </p>
   </div>
 </section>
-<!-- End main results -->
+<!-- End leaderboard -->
 
 
 <!-- Key findings -->
@@ -434,6 +440,105 @@
 <!-- End key findings -->
 
 
+<!-- Dataset -->
+<section class="section" id="dataset">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Dataset</h2>
+    <h2 class="subtitle has-text-centered rg-section-sub">
+      Every camera geometry is rendered over the same underlying scenes, so images and extrinsics
+      stay geometrically consistent across the whole benchmark. Annotations follow the
+      <a href="https://www.nuscenes.org/nuscenes" target="_blank">nuScenes</a> schema, extended with
+      object attributes and a four-level visibility computed per platform.
+    </h2>
+
+    <div class="rg-data-grid">
+      <div class="rg-data-card">
+        <h3>Scenes &amp; frames</h3>
+        <ul>
+          <li><b>268</b> driving scenes &mdash; 220 train / 48 held-out eval</li>
+          <li>Rendered at <b>5&nbsp;Hz</b> for all three platforms</li>
+          <li><b>17,380</b> train + <b>3,792</b> eval frames per platform</li>
+          <li><b>6</b> surround cameras per frame, fixed intrinsics</li>
+        </ul>
+      </div>
+      <div class="rg-data-card">
+        <h3>Camera geometries</h3>
+        <ul>
+          <li><b>212</b> changed geometries beyond the base rig</li>
+          <li>Viewpoint perturbation: <b>210</b> &mdash; roll / pitch / yaw at
+            &plusmn;4&deg;, &plusmn;8&deg;, &plusmn;12&deg;, &plusmn;16&deg;, &plusmn;20&deg;</li>
+          <li>Per-camera (6&nbsp;&times;&nbsp;30) and all-camera (30) modes</li>
+          <li>Cross-platform: <b>2</b> &mdash; SUV and Bus layouts</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="rg-data-heading">Structure</h3>
+    <pre class="rg-code"><code>RoboGeo/
+├── viewpoint_perturbation/                    # rotated rigs, one tar per camera and angle
+│   ├── RGB-CAM_FRONT_yaw8pitch0roll0.tar      #   6 cameras x 31 settings = 186 tars
+│   ├── RGB-CAM_BACK_LEFT_yaw0pitch0roll-20.tar
+│   └── viewpoint_metadata.json
+├── platform_layouts/                          # one tar per camera and platform
+│   ├── RGB-CAM_FRONT.tar                      #   Sedan (base rig, no prefix)
+│   ├── RGB-suv-CAM_FRONT.tar                  #   SUV
+│   └── RGB-bus-CAM_FRONT.tar                  #   Bus
+└── metadata/                                  # nuScenes-schema annotations,
+    └── carla_geobev_meta.tar.zst              #   extrinsics, attributes, visibility</code></pre>
+    <p class="rg-table-notes">
+      Perturbation tars are named <code>RGB-&lt;CAMERA&gt;_yaw&lt;Y&gt;pitch&lt;P&gt;roll&lt;R&gt;.tar</code>
+      with angles in degrees, so <code>RGB-CAM_FRONT_yaw8pitch0roll0.tar</code> is the front camera
+      rotated by yaw&nbsp;+8&deg;. Cameras use the nuScenes names
+      (<code>CAM_FRONT</code>, <code>CAM_FRONT_LEFT</code>, <code>CAM_FRONT_RIGHT</code>,
+      <code>CAM_BACK</code>, <code>CAM_BACK_LEFT</code>, <code>CAM_BACK_RIGHT</code>), and each has
+      31&nbsp;settings: 30 single-axis rotations plus the unperturbed
+      <code>yaw0pitch0roll0</code>. Because renders are stored <b>per camera</b>, both the
+      per-camera and the all-camera mode are assembled from the same tars: rotate one camera and
+      read the other five unperturbed, or take the same angle for all six. The Sedan base rig in
+      <code>platform_layouts/</code> provides the <b>NORMAL</b> condition and the training data for
+      both protocols.
+    </p>
+
+    <h3 class="rg-data-heading">Getting started</h3>
+    <p class="rg-table-notes" style="margin-bottom: 0.6rem;">
+      The dataset is gated &mdash; request access on the dataset page first, then authenticate with
+      <code>huggingface_hub</code>. The full release is large, so download only the geometries you
+      need with <code>allow_patterns</code>.
+    </p>
+    <pre class="rg-code"><code>from huggingface_hub import snapshot_download
+
+# One perturbation setting: front camera, yaw +8 degrees
+snapshot_download(
+    "shdragron/RoboGeo",
+    repo_type="dataset",
+    allow_patterns=[
+        "viewpoint_perturbation/RGB-CAM_FRONT_yaw8pitch0roll0.tar",
+        "viewpoint_perturbation/viewpoint_metadata.json",
+        "metadata/*",
+    ],
+    local_dir="RoboGeo",
+)
+
+# Or a whole platform layout: every camera of the Bus
+snapshot_download(
+    "shdragron/RoboGeo",
+    repo_type="dataset",
+    allow_patterns=["platform_layouts/RGB-bus-*.tar", "metadata/*"],
+    local_dir="RoboGeo",
+)</code></pre>
+
+    <div class="has-text-centered" style="margin-top: 1.75rem;">
+      <a href="https://huggingface.co/datasets/shdragron/RoboGeo" target="_blank"
+         class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">🤗</span>
+        <span>Browse the dataset on Hugging Face</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- End dataset -->
+
+
 <!-- Acknowledgements and license -->
 <section class="section" id="acknowledgements">
   <div class="container is-max-desktop content">
@@ -447,7 +552,8 @@
       and the CARLA team for the open-source simulator that made this work possible.
     </p>
     <p>
-      The RoboGeo dataset is released under the
+      The <a href="https://huggingface.co/datasets/shdragron/RoboGeo" target="_blank">RoboGeo dataset</a>
+      is released under the
       <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       CC&nbsp;BY-NC-SA&nbsp;4.0</a> license
       (Attribution&ndash;NonCommercial&ndash;ShareAlike).

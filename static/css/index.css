@@ -1126,7 +1126,7 @@ a:focus {
 
 .rg-results th,
 .rg-results td {
-  padding: 0.45rem 0.6rem;
+  padding: 0.45rem 0.5rem;
   text-align: center;
   white-space: nowrap;
 }
@@ -1300,4 +1300,89 @@ a:focus {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.55;
+}
+
+/* ===== dataset section ===== */
+.rg-data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .rg-data-grid { grid-template-columns: 1fr; }
+}
+
+.rg-data-card {
+  background: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+}
+
+.rg-data-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.rg-data-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rg-data-card li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 0.25rem;
+}
+
+.rg-data-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.rg-data-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 1.75rem 0 0.7rem;
+}
+
+.rg-code {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.rg-code code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  white-space: pre;
+}
+
+.rg-table-notes code {
+  background: var(--background-accent);
+  color: var(--text-primary);
+  border-radius: 4px;
+  padding: 0.05rem 0.3rem;
+  font-size: 0.85em;
 }
