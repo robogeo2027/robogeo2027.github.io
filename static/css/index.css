@@ -759,15 +759,41 @@ a:focus {
 }
 
 /* ===== RoboGeo header ===== */
-.title-icon {
-  height: 1.05em;
-  width: auto;
-  vertical-align: -0.17em;
-  margin-right: 0.25em;
+/* Sizes are in em of the h1, so the mobile .publication-title sizes scale them. */
+.publication-title .title-main,
+.publication-title .title-sub {
+  display: block;
+  font-family: 'Google Sans', 'Inter', sans-serif;
+  font-weight: 500;
 }
 
-.title-accent {
+.publication-title .title-main {
+  font-size: 1.53em;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4em;
+}
+
+.publication-title .title-sub {
+  font-size: 0.77em;
+  line-height: 1.2;
+  color: #2b2f36;
+  text-wrap: balance;
+}
+
+.title-icon {
+  height: 0.95em;
+  width: auto;
+  vertical-align: -0.12em;
+  margin-right: 0.3em;
+}
+
+.title-robo {
   color: var(--primary-color);
+}
+
+.title-geo {
+  color: #f0841a;
 }
 
 .author-name {
