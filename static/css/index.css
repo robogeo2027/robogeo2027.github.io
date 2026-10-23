@@ -753,9 +753,28 @@ a:focus {
 
 
 /* Coming-soon buttons: greyed out and non-clickable until links go public */
-.publication-links .button.is-coming-soon {
-  opacity: 0.55;
+/* Unreleased links: muted grey, no hover lift, plus a "Coming soon" pill.
+   Drop the is-coming-soon class (and add an href) once the link is live. */
+.publication-links .button.is-coming-soon,
+.publication-links .button.is-coming-soon:hover {
+  background: #7c8798 !important;
+  box-shadow: none;
+  transform: none;
   cursor: not-allowed;
+}
+
+.publication-links .button.is-coming-soon::after {
+  content: 'Coming soon';
+  margin-left: 0.55em;
+  padding: 0.2em 0.6em;
+  border-radius: 9999px;
+  background: #fff;
+  color: #c2610c;
+  font-size: 0.66em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 /* ===== RoboGeo header ===== */
