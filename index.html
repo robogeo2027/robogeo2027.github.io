@@ -70,7 +70,8 @@
 
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <!-- ?v= busts the 10-minute GitHub Pages cache: bump it whenever index.css or static/js/*.js change -->
+  <link rel="stylesheet" href="static/css/index.css?v=20261023">
 
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -88,9 +89,9 @@
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  <script defer src="static/js/rg-demo.js"></script>
-  <script defer src="static/js/rg-results.js"></script>
+  <script defer src="static/js/index.js?v=20261023"></script>
+  <script defer src="static/js/rg-demo.js?v=20261023"></script>
+  <script defer src="static/js/rg-results.js?v=20261023"></script>
 
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
