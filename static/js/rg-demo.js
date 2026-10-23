@@ -193,6 +193,12 @@
     var lastSrc = null;
     var interacted = false;   // gate prefetching until first interaction
 
+    // First interaction retires the drag hint and the gesture demo.
+    function dismissHint() {
+      hint.classList.add('rg-hint-hidden');
+      wrap.classList.remove('rg-hinting');
+    }
+
     function base() { return 'static/demo/viewpoint/' + scene + '/'; }
     function fileFor(p) {
       var signed = p.angle * FILE_SIGN[p.axis];
@@ -272,7 +278,7 @@
         d.pointer = e.pointerId;
         if (svg.setPointerCapture) svg.setPointerCapture(e.pointerId);
         stage.classList.add('rg-no-ease');
-        hint.classList.add('rg-hint-hidden');
+        dismissHint();
         dialApply(d, e);
         e.preventDefault();
       });
@@ -296,6 +302,7 @@
         else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') delta = -STEP;
         else return;
         e.preventDefault();
+        dismissHint();
         var current = (pose.axis === cfg.axis) ? pose.angle : 0;
         applyAxis(cfg.axis, clamp(current + delta, -MAX, MAX));
         stage.style.transform = '';
@@ -359,7 +366,7 @@
       sy = e.clientY;
       if (wrap.setPointerCapture) wrap.setPointerCapture(e.pointerId);
       stage.classList.add('rg-no-ease');
-      hint.classList.add('rg-hint-hidden');
+      dismissHint();
       e.preventDefault();
     });
 

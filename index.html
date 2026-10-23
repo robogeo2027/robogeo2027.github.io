@@ -292,7 +292,7 @@
           <button type="button" data-scene="scene-0250">2</button>
           <button type="button" data-scene="scene-0267">3</button>
         </div>
-        <div class="rg-video-wrap rg-grabbable">
+        <div class="rg-video-wrap rg-grabbable rg-hinting">
           <div class="rg-stage">
             <video muted loop playsinline autoplay preload="auto"></video>
             <video muted loop playsinline preload="auto"></video>
@@ -300,6 +300,14 @@
           <div class="rg-badge">Base rig</div>
           <div class="rg-spinner" style="display:none"><div class="rg-spinner-dot"></div></div>
           <div class="rg-play-overlay"><i class="fas fa-play"></i></div>
+          <!-- Gesture demo: shown until the first drag / dial interaction -->
+          <div class="rg-gesture" aria-hidden="true">
+            <span class="rg-gesture-arrow rg-ga-left"><i class="fas fa-caret-left"></i></span>
+            <span class="rg-gesture-arrow rg-ga-right"><i class="fas fa-caret-right"></i></span>
+            <span class="rg-gesture-arrow rg-ga-up"><i class="fas fa-caret-up"></i></span>
+            <span class="rg-gesture-arrow rg-ga-down"><i class="fas fa-caret-down"></i></span>
+            <span class="rg-gesture-hand"><i class="fas fa-hand-pointer"></i></span>
+          </div>
           <div class="rg-drag-hint"><i class="fas fa-arrows-alt"></i>&nbsp;Drag to rotate the camera</div>
         </div>
         <div class="rg-vp-controls">
