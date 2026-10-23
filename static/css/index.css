@@ -777,6 +777,27 @@ a:focus {
   text-transform: uppercase;
 }
 
+/* Acceptance note under the link buttons */
+.rg-news {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.9rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: 8px;
+  background: #ecfdf3;
+  color: #15803d;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 480px) {
+  .rg-news {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+  }
+}
+
 /* ===== RoboGeo header ===== */
 /* Sizes are in em of the h1, so the mobile .publication-title sizes scale them. */
 .publication-title .title-main,
