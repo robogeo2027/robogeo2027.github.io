@@ -777,25 +777,14 @@ a:focus {
   text-transform: uppercase;
 }
 
-/* Acceptance note under the link buttons */
-.rg-news {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-top: 0.9rem;
-  padding: 0.4rem 0.95rem;
-  border-radius: 8px;
-  background: #ecfdf3;
-  color: #15803d;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-@media screen and (max-width: 480px) {
-  .rg-news {
-    font-size: 0.8rem;
-    padding: 0.35rem 0.75rem;
-  }
+/* Acceptance note under the venue line */
+.venue-note {
+  display: inline-block;
+  margin-top: 0.15rem;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 0.01em;
 }
 
 /* ===== RoboGeo header ===== */
