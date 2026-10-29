@@ -237,7 +237,7 @@
         <div class="rg-stat"><span class="rg-stat-num">268</span><span class="rg-stat-label">driving scenes</span></div>
         <div class="rg-stat"><span class="rg-stat-num">212</span><span class="rg-stat-label">changed camera geometries</span></div>
         <div class="rg-stat"><span class="rg-stat-num">3</span><span class="rg-stat-label">vehicle platforms</span></div>
-        <div class="rg-stat"><span class="rg-stat-num">2</span><span class="rg-stat-label">protocols &amp; tasks</span></div>
+        <div class="rg-stat"><span class="rg-stat-num">2</span><span class="rg-stat-label">tasks</span></div>
         <div class="rg-stat"><span class="rg-stat-num">13</span><span class="rg-stat-label">models benchmarked</span></div>
       </div>
     </div>
@@ -347,8 +347,9 @@
       <h2 class="subtitle has-text-centered rg-section-sub">
         This protocol deploys a Sedan-trained model on vehicles whose cameras are mounted at
         different heights and orientations. The same scene is captured from the camera layouts of
-        three platforms &mdash; <b>switch the platform</b> while the scene plays (front camera shown):
-        the timeline continues, only the camera layout changes.
+        three platforms &mdash; <b>switch the platform</b> while the scene plays. Each clip starts
+        with all six cameras, then zooms into the front camera; the timeline continues, only the
+        camera layout changes.
       </h2>
       <div id="rg-cp" class="rg-demo">
         <div class="rg-scene-group" role="group" aria-label="Scene selection">
@@ -576,18 +577,10 @@ snapshot_download(
 <!-- End dataset -->
 
 
-<!-- Acknowledgements and license -->
-<section class="section" id="acknowledgements">
+<!-- License -->
+<section class="section" id="license">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3">Acknowledgements &amp; License</h2>
-    <p>
-      RoboGeo is built on <a href="https://github.com/goodarzmehr/simbev" target="_blank">SimBEV</a>
-      (<a href="https://arxiv.org/abs/2502.01894" target="_blank">Mehr and Eskandarian, 2025</a>),
-      a synthetic multi-task multi-sensor driving data generation tool based on the
-      <a href="https://carla.org" target="_blank">CARLA</a> simulator.
-      We sincerely thank Dr.&nbsp;Goodarz Mehr for making SimBEV available and for supporting its use in this benchmark,
-      and the CARLA team for the open-source simulator that made this work possible.
-    </p>
+    <h2 class="title is-3">License</h2>
     <p>
       The <a href="https://huggingface.co/datasets/shdragron/RoboGeo" target="_blank">RoboGeo dataset</a>
       is released under the
@@ -597,7 +590,7 @@ snapshot_download(
     </p>
   </div>
 </section>
-<!-- End acknowledgements -->
+<!-- End license -->
 
 
 <!--BibTex citation -->

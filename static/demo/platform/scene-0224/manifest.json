@@ -1,15 +1,18 @@
 {
  "scene": "0224",
- "camera": "CAM_FRONT",
- "fps": 8,
- "n_frames": 158,
+ "camera": "all six cameras, zooming into CAM_FRONT",
+ "fps": 24,
+ "n_frames": 474,
  "size": [
-  800,
-  450
+  960,
+  540
  ],
  "files": {
   "sedan": "sedan.mp4",
   "suv": "suv.mp4",
   "bus": "bus.mp4"
- }
+ },
+ "source_fps": 8,
+ "layout": "3x2 grid (FRONT_LEFT FRONT FRONT_RIGHT / BACK_LEFT BACK BACK_RIGHT); front tile highlighted 6-8 s, eased zoom into CAM_FRONT 8-10 s",
+ "source": "carla:/data1/RoboGeo/simbev_compare/sweeps2 (sedan = subcompact rig)"
 }
