@@ -763,6 +763,11 @@ a:focus {
   cursor: not-allowed;
 }
 
+/* Linked ahead of release (e.g. a still-private repo): keep the pill, allow the click */
+.publication-links a.button.is-coming-soon[href] {
+  cursor: pointer;
+}
+
 .publication-links .button.is-coming-soon::after {
   content: 'Coming soon';
   margin-left: 0.55em;
