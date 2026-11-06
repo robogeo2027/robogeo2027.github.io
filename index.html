@@ -185,7 +185,7 @@
                     </span>
 
                   <span class="link-block">
-                    <a href="https://github.com/shdragron/RoboGeo2027" target="_blank" rel="noopener"
+                    <a href="https://github.com/shdragron/RoboGeo" target="_blank" rel="noopener"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -417,10 +417,9 @@
       <sup>&Dagger;</sup>&nbsp;explicitly designed to be robust to extrinsic viewpoint changes.
     </p>
     <p class="rg-table-notes has-text-centered" style="margin-top: 0.75rem;">
-      <!-- TODO: Move to the public benchmark repository's issues once released -->
-      <i class="fab fa-github"></i>&nbsp;Want your model on the leaderboard?
-      <a href="https://github.com/robogeo2027/robogeo2027.github.io/issues" target="_blank">Open an issue</a>
-      with your results on the RoboGeo evaluation split.
+      <i class="fab fa-github"></i>&nbsp;Want your model on the leaderboard? Evaluate it with the
+      <a href="https://github.com/shdragron/RoboGeo/blob/main/docs/new_model.md" target="_blank">benchmark code</a>
+      and <a href="https://github.com/shdragron/RoboGeo/issues" target="_blank">open an issue</a> with your results.
     </p>
   </div>
 </section>
@@ -521,8 +520,9 @@
 │   ├── RGB-CAM_FRONT.tar                      #   Sedan (base rig, no prefix)
 │   ├── RGB-suv-CAM_FRONT.tar                  #   SUV
 │   └── RGB-bus-CAM_FRONT.tar                  #   Bus
-└── metadata/                                  # nuScenes-schema annotations,
-    └── carla_geobev_meta.tar.zst              #   extrinsics, attributes, visibility</code></pre>
+├── metadata/                                  # nuScenes-schema annotations,
+│   └── carla_geobev_meta.tar.zst              #   extrinsics, attributes, visibility
+└── bev_segmentation_labels/                   # BEV segmentation labels, one tar per platform and split</code></pre>
     <p class="rg-table-notes">
       Perturbation tars are named <code>RGB-&lt;CAMERA&gt;_yaw&lt;Y&gt;pitch&lt;P&gt;roll&lt;R&gt;.tar</code>
       with angles in degrees, so <code>RGB-CAM_FRONT_yaw8pitch0roll0.tar</code> is the front camera
@@ -539,9 +539,9 @@
 
     <h3 class="rg-data-heading">Getting started</h3>
     <p class="rg-table-notes" style="margin-bottom: 0.6rem;">
-      The dataset is gated &mdash; request access on the dataset page first, then authenticate with
-      <code>huggingface_hub</code>. The full release is large, so download only the geometries you
-      need with <code>allow_patterns</code>.
+      The full release is large, so download only the geometries you need with
+      <code>allow_patterns</code>. Extraction and evaluation are described in the
+      <a href="https://github.com/shdragron/RoboGeo/blob/main/docs/data.md" target="_blank">code repository</a>.
     </p>
     <pre class="rg-code"><code>from huggingface_hub import snapshot_download
 
@@ -586,7 +586,10 @@ snapshot_download(
       is released under the
       <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       CC&nbsp;BY-NC-SA&nbsp;4.0</a> license
-      (Attribution&ndash;NonCommercial&ndash;ShareAlike).
+      (Attribution&ndash;NonCommercial&ndash;ShareAlike), as are the checkpoints; the
+      <a href="https://github.com/shdragron/RoboGeo" target="_blank">code</a> is released under Apache-2.0.
+      RoboGeo is derived from <a href="https://github.com/goodarzmehr/simbev" target="_blank">SimBEV</a>
+      with the permission of its authors; please also cite SimBEV and CARLA.
     </p>
   </div>
 </section>
